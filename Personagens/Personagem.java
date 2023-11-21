@@ -1,11 +1,10 @@
 package Personagens;
 
-import java.util.Random;
 
 /*Durante a criação do personagem os atributos for, dest, const e etc. serão gerados de forma
  randomica entre 10 e 18*/
 
-public class Personagem {
+public abstract class Personagem {
     private String nome;
     private int forca;
     private int destreza;
@@ -26,12 +25,10 @@ public class Personagem {
     private int modsab;
     private int modint;
 
-public Personagem (String nome){
+public Personagem (String nome, int forca, int destreza, int constituicao, int sabedoria, int inteligencia){
     this.nome = nome;
 
-    Random random = new Random();
-
-    this.forca = 10 + random.nextInt(9);
+    this.forca = forca;
     if (this.forca == 10 || this.forca == 11) {
         this.modfor = 0;
     }else if (this.forca == 12 || this.forca == 13){
@@ -44,7 +41,7 @@ public Personagem (String nome){
         this.modfor = 4;
     }
 
-    this.destreza = 10 + random.nextInt(9);
+    this.destreza = destreza;
     if (this.destreza == 10 || this.destreza == 11) {
         this.moddes = 0;
     }else if (this.destreza == 12 || this.destreza == 13){
@@ -57,7 +54,7 @@ public Personagem (String nome){
         this.moddes = 4;
     }
 
-    this.constituicao = 10 + random.nextInt(9);
+    this.constituicao = constituicao;
     if (this.constituicao == 10 || this.constituicao == 11) {
         this.modcons = 0;
     }else if (this.constituicao == 12 || this.constituicao == 13){
@@ -70,7 +67,7 @@ public Personagem (String nome){
         this.modcons = 4;
     }
 
-    this.sabedoria= 10 + random.nextInt(9);
+    this.sabedoria = sabedoria;
     if (this.sabedoria == 10 || this.sabedoria == 11) {
         this.modsab = 0;
     }else if (this.sabedoria == 12 || this.sabedoria == 13){
@@ -83,7 +80,7 @@ public Personagem (String nome){
         this.modsab = 4;
     }
 
-    this.inteligencia = 10 + random.nextInt(9);
+    this.inteligencia = inteligencia;
     if (this.inteligencia == 10 || this.inteligencia == 11) {
         this.modint = 0;
     }else if (this.inteligencia == 12 || this.inteligencia == 13){
@@ -97,5 +94,54 @@ public Personagem (String nome){
     }
 
 }
+public abstract int calcularHP();
 
+public abstract int calcularArmadura();
+
+public abstract void exibirFicha();
+
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getForca() {
+        return forca;
+    }
+
+    public int getDestreza() {
+        return destreza;
+    }
+
+    public int getConstituicao() {
+        return constituicao;
+    }
+
+    public int getSabedoria() {
+        return sabedoria;
+    }
+
+    public int getInteligencia() {
+        return inteligencia;
+    }
+
+    public int getModfor() {
+        return modfor;
+    }
+
+    public int getModdes() {
+        return moddes;
+    }
+
+    public int getModcons() {
+        return modcons;
+    }
+
+    public int getModsab() {
+        return modsab;
+    }
+
+    public int getModint() {
+        return modint;
+    }
 }
