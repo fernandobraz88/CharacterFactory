@@ -21,16 +21,19 @@ public class Arqueiro extends Personagem{
 
     @Override
     public void habilidades() {
+        System.out.println("Tiro com Arco: 1d8 + " + getModdes());
+        System.out.println("Tiro Concentrado: +" + getModint() + " na rolagem de acerto");
+        System.out.println("Inimigo Predileto: +" + getModsab() + " de dano contra o tipo de inimigo escolhido");
 
     }
 
     @Override
     public void exibirFicha() {
         System.out.println("====== Ficha de Personagem =====");
-        System.out.println(" ");
+        System.out.println(' ');
         System.out.println("Nome: " + getNome());
         System.out.println("Classe: Arqueiro");
-        System.out.println(" ");
+        System.out.println(' ');
         System.out.println("** Atributos: **");
         System.out.println("Força: " + getForca());
         System.out.println("Destreza: " + getDestreza());
@@ -40,6 +43,9 @@ public class Arqueiro extends Personagem{
         System.out.println(" ");
         System.out.println("Vida Total: " + calcularHP());
         System.out.println("Armadura Total: " + calcularArmadura());
+        System.out.println(' ');
+        System.out.println("** Habilidades: **");
+        habilidades();
 
     }
 
