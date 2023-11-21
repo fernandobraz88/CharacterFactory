@@ -2,8 +2,11 @@ package Personagens;
 
 public class Ladino extends Personagem{
 
+    private int armaduraCouro;
+
     public Ladino(String nome, int forca, int destreza, int constituicao, int sabedoria, int inteligencia) {
         super(nome, forca, destreza, constituicao, sabedoria, inteligencia);
+        this.armaduraCouro = 2;
     }
     @Override
     public int calcularHP() {
@@ -12,7 +15,12 @@ public class Ladino extends Personagem{
 
     @Override
     public int calcularArmadura() {
-        return 10 + getModdes();
+        return 10 + getArmaduraCouro()+ getModdes();
+    }
+
+    @Override
+    public void habilidades() {
+
     }
 
     @Override
@@ -30,6 +38,15 @@ public class Ladino extends Personagem{
         System.out.println("Inteligencia: " + getInteligencia());
         System.out.println(" ");
         System.out.println("Vida Total: " + calcularHP());
+        System.out.println("Armadura Total: " + calcularArmadura());
 
+    }
+
+    public int getArmaduraCouro() {
+        return armaduraCouro;
+    }
+
+    public void setArmaduraCouro(int armaduraCouro) {
+        this.armaduraCouro = armaduraCouro;
     }
 }

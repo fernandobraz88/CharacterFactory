@@ -98,7 +98,11 @@ public abstract int calcularHP();
 
 public abstract int calcularArmadura();
 
+public abstract void habilidades();
+
 public abstract void exibirFicha();
+
+
 
 
     public String getNome() {

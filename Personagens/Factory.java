@@ -1,10 +1,9 @@
 package Personagens;
 
 
-
 public class Factory {
-    public static void criar (String Classe, String nome, int forca, int destreza, int constituicao, int sabedoria, int inteligencia ){
-        switch (Classe.toLowerCase()){
+    public static void criar (String classe, String nome, int forca, int destreza, int constituicao, int sabedoria, int inteligencia ){
+        switch (classe.toLowerCase()){
             case "mago":{
                 Mago mago = new Mago(nome, forca, destreza, constituicao, sabedoria, inteligencia);
                 mago.exibirFicha();

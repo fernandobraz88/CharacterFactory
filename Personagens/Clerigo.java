@@ -2,8 +2,11 @@ package Personagens;
 
 public class Clerigo extends Personagem{
 
+    private int armaduraPesada;
+
     public Clerigo(String nome, int forca, int destreza, int constituicao, int sabedoria, int inteligencia) {
         super(nome, forca, destreza, constituicao, sabedoria, inteligencia);
+        this.armaduraPesada = 3;
     }
 
     @Override
@@ -14,6 +17,11 @@ public class Clerigo extends Personagem{
     @Override
     public int calcularArmadura() {
         return 10 + getModdes();
+    }
+
+    @Override
+    public void habilidades() {
+
     }
 
     @Override
