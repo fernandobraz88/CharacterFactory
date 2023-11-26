@@ -21,7 +21,7 @@ public class Mago extends Personagem{
     @Override
     public void habilidades() {
         System.out.println("Misseis Mágicos: 3d4 + "+ getModint());
-        System.out.println("Clarão de Luz: Cega o adversario por "+getModint()+" turnos");
+        System.out.println("Clarão de Luz: Cega o adversario por "+1+getModint()+" turnos");
         System.out.println("Escudo Arcano: +" + (getModint()+getModcons()) + " de vida extra temporaria");
     }
 

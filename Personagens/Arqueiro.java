@@ -22,8 +22,8 @@ public class Arqueiro extends Personagem{
     @Override
     public void habilidades() {
         System.out.println("Tiro com Arco: 1d8 + " + getModdes());
-        System.out.println("Tiro Concentrado: +" + getModint() + " na rolagem de acerto");
-        System.out.println("Inimigo Predileto: +" + getModsab() + " de dano contra o tipo de inimigo escolhido");
+        System.out.println("Tiro Concentrado: +" + 1+getModint() + " na rolagem de acerto");
+        System.out.println("Inimigo Predileto: +" + 1+getModsab() + " de dano contra o tipo de inimigo escolhido");
 
     }
 

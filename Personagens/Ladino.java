@@ -21,7 +21,7 @@ public class Ladino extends Personagem{
     @Override
     public void habilidades() {
         System.out.println("Lâmina envenenada: 1d4 + " + getModfor());
-        System.out.println("Esconder-se: Oculta sua presença por "+ getDestreza() + " turnos");
+        System.out.println("Esconder-se: Oculta sua presença por "+ 1+getDestreza() + " turnos");
         System.out.println("Ataque Sorrateiro: Quando fora do campo de visão do inimigo recebe +" +2*(getModint()+getDestreza())+" no dano");
 
 
